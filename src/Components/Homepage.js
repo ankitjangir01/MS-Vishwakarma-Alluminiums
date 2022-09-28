@@ -58,6 +58,7 @@ const Homepage = () => {
                         <Tab label="All" {...a11yProps(0)} />
                         <Tab label="Doors" {...a11yProps(1)} />
                         <Tab label="Windows" {...a11yProps(2)} />
+                        <Tab label="Miscellaneous" {...a11yProps(3)} />
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
@@ -68,6 +69,9 @@ const Homepage = () => {
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <Imagelist itemData={imageData.windows}/>
+                </TabPanel>
+                <TabPanel value={value} index={2}>
+                    <Imagelist itemData={imageData.miscellaneous}/>
                 </TabPanel>
             </Box>
         </>
