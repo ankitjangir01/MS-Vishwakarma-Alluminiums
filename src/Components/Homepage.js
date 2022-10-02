@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Imagelist from './Imagelist';
 import imageData from '../imagesources';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Homepage = () => {
     const [value, setValue] = useState(0);
@@ -51,10 +52,15 @@ const Homepage = () => {
 
     return (
         <>
-        <Navbar />
+            <Navbar />
             <Box sx={{ width: '100%' }}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', color: "#ff9800" }}>
+                    <Tabs
+                        value={value}
+                        onChange={handleChange}
+                        aria-label="#d37e00 tabs example"
+                        variant="scrollable"
+                    >
                         <Tab label="All" {...a11yProps(0)} />
                         <Tab label="Doors" {...a11yProps(1)} />
                         <Tab label="Windows" {...a11yProps(2)} />
@@ -62,18 +68,19 @@ const Homepage = () => {
                     </Tabs>
                 </Box>
                 <TabPanel value={value} index={0}>
-                    <Imagelist itemData={imageData.all}/>
+                    <Imagelist itemData={imageData.all} />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <Imagelist itemData={imageData.doors}/>
+                    <Imagelist itemData={imageData.doors} />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <Imagelist itemData={imageData.windows}/>
+                    <Imagelist itemData={imageData.windows} />
                 </TabPanel>
-                <TabPanel value={value} index={2}>
-                    <Imagelist itemData={imageData.miscellaneous}/>
+                <TabPanel value={value} index={3}>
+                    <Imagelist itemData={imageData.miscellaneous} />
                 </TabPanel>
             </Box>
+            <Footer />
         </>
     )
 }

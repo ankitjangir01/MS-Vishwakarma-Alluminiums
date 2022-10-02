@@ -6,8 +6,8 @@ import Typography from '@mui/material/Typography';
 
 const Navbar = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+        <Box sx={{ flexGrow: 1}} >
+            <AppBar position="static" sx={{backgroundColor: "#d37e00"}}>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         MS Vishwakarma Alluminiums
